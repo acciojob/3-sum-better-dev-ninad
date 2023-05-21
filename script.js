@@ -3,7 +3,7 @@ function threeSum(arr, target) {
 	arr.sort((a,b)=>{
 	a-b;	
 	})
-	let closestSum=Infinity;
+	let closestSum = Infinity;
 
 	for(let i=0; i<arr.length-2;i++){
 		let left = i+1;
@@ -16,7 +16,7 @@ function threeSum(arr, target) {
 			if(diff===0){
 				return sum;
 			}
-			if(diff<Math.abs(target-sum)){
+			if(diff<Math.abs(target-closestSum)){
 				closestSum = sum;
 			}
 
